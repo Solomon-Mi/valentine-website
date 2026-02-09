@@ -11,6 +11,23 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+// Starting sizes
+let noScale = 1;
+let yesScale = 1;
+
+// When NO is clicked → shrink NO and grow YES
+noBtn.addEventListener("click", () => {
+  // Shrink the NO button a bit each click
+  noScale -= 0.1;
+  if (noScale < 0.2) noScale = 0.2; // Prevent disappearing
+  noBtn.style.transform = `scale(${noScale})`;
+
+  // Grow the YES button a bit each click
+  yesScale += 0.1;
+  yesBtn.style.transform = `scale(${yesScale})`;
+});
+
+
 // When "Yes" is clicked → go to second page
 yesBtn.addEventListener("click", () => {
   music.play();
@@ -28,3 +45,4 @@ setInterval(() => {
 
   setTimeout(() => heart.remove(), 6000);
 }, 500);
+
