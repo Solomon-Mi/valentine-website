@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Said Yes!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating hearts again -->
+  <div class="hearts"></div>
+
+  <!-- Cute celebration card -->
+  <div class="card">
+    <!-- Custom video instead of an image -->
+<video class="custom-img" autoplay loop muted playsinline>
+  <source src="kermitthefrog-dance.mp4" type="video/mp4">
+</video>
+
+    <h1>Yay! You said yes 💗</h1>
+    <p>You officially made this the best Valentine’s ever.</p>
+
+    <button class="back" onclick="window.location.href='index.html'">
+      Go Back
+    </button>
+  </div>
+
+  <!-- Optional music -->
+  <audio id="music" loop autoplay>
+    <source src="Happy Happy Happy TikTok Song 1 Hour.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="music" loop autoplay>
+    <source src="https://audio-previews.elements.envatousercontent.com/files/34872494/preview.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    // Floating hearts for page 2
+    const heartsContainer = document.querySelector(".hearts");
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "%";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }, 500);
+  </script>
+
+</body>
+</html>
