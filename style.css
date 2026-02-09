@@ -7,7 +7,7 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #3ca9ae, #8fbfc2);
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* Floating hearts container */
@@ -118,3 +118,4 @@ bold{
   color: #555;
   opacity: 0.8;
 }
+
