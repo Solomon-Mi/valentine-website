@@ -11,6 +11,10 @@ noBtn.addEventListener("mouseover", () => {
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+// Select buttons
+//const noBtn = document.querySelector(".no");
+//const yesBtn = document.querySelector(".yes");
+
 // Starting sizes
 let noScale = 1;
 let yesScale = 1;
@@ -45,4 +49,6 @@ setInterval(() => {
 
   setTimeout(() => heart.remove(), 6000);
 }, 500);
+
+
 
